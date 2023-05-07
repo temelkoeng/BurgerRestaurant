@@ -1,0 +1,8 @@
+C:\Users\Ivelina\Desktop\BurgerRestaurant\BurgerRestaurant\BurgerRestaurant\bin\Debug\BurgerRestaurant.exe.config
+C:\Users\Ivelina\Desktop\BurgerRestaurant\BurgerRestaurant\BurgerRestaurant\bin\Debug\BurgerRestaurant.exe
+C:\Users\Ivelina\Desktop\BurgerRestaurant\BurgerRestaurant\BurgerRestaurant\bin\Debug\BurgerRestaurant.pdb
+C:\Users\Ivelina\Desktop\BurgerRestaurant\BurgerRestaurant\BurgerRestaurant\obj\Debug\BurgerRestaurant.csproj.AssemblyReference.cache
+C:\Users\Ivelina\Desktop\BurgerRestaurant\BurgerRestaurant\BurgerRestaurant\obj\Debug\BurgerRestaurant.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ivelina\Desktop\BurgerRestaurant\BurgerRestaurant\BurgerRestaurant\obj\Debug\BurgerRestaurant.csproj.CoreCompileInputs.cache
+C:\Users\Ivelina\Desktop\BurgerRestaurant\BurgerRestaurant\BurgerRestaurant\obj\Debug\BurgerRestaurant.exe
+C:\Users\Ivelina\Desktop\BurgerRestaurant\BurgerRestaurant\BurgerRestaurant\obj\Debug\BurgerRestaurant.pdb
