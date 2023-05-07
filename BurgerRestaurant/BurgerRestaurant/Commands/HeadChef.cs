@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BurgerRestaurant.Helpers;
 
 namespace BurgerRestaurant.Commands
 {
@@ -30,9 +31,8 @@ namespace BurgerRestaurant.Commands
             Console.WriteLine($"Видът на бургера: {_burger.GetName()}");
 
             Console.WriteLine("Искате ли да добавите сос? (Y/N)");
-            string input = Console.ReadLine();
 
-            if (input.ToLower() == "y")
+            if (InputHelper.AskTheClientForDecoration())
             {
                 List<IBurgerDecorator> decorators = new List<IBurgerDecorator>();
 
@@ -40,29 +40,25 @@ namespace BurgerRestaurant.Commands
                 Console.WriteLine("1. Кетчуп (0.5 лв)");
                 Console.WriteLine("2. Майонеза (0.7 лв)");
 
-                input = Console.ReadLine();
+                int sauceType = InputHelper.GetDecorationNumber();
 
-                while (input != "")
+                if (sauceType == 1)
                 {
-                    int sauceType;
-                    if (int.TryParse(input, out sauceType) && sauceType > 0 && sauceType < 3)
+                    decorators.Add(new KetchupSauce(_burger));
+                    Console.WriteLine("Искате ли да добавите и майонеза?");
+                    if (InputHelper.AskTheClientForDecoration())
                     {
-                        if (sauceType == 1)
-                        {
-                            decorators.Add(new KetchupSauce(_burger));
-                        }
-                        else if (sauceType == 2)
-                        {
-                            decorators.Add(new MayonnaiseSauce(_burger));
-                        }
+                        decorators.Add(new MayonnaiseSauce(_burger));
                     }
-                    else
+                }
+                else if (sauceType == 2)
+                {
+                    decorators.Add(new MayonnaiseSauce(_burger));
+                    Console.WriteLine("Искате ли да добавите и кетчуп?");
+                    if (InputHelper.AskTheClientForDecoration())
                     {
-                        Console.WriteLine("Невалиден тип! Моля изберете число между 1 и 2.");
+                        decorators.Add(new KetchupSauce(_burger));
                     }
-
-                    Console.WriteLine("Искате ли да добавите друг сос? (Натиснете Enter, за да приключите...)");
-                    input = Console.ReadLine();
                 }
 
                 foreach (var decorator in decorators)

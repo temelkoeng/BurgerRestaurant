@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BurgerRestaurant.Helpers;
+using System;
 
 namespace BurgerRestaurant.Commands
 {
@@ -18,17 +19,9 @@ namespace BurgerRestaurant.Commands
             Console.WriteLine("2. Класически бургер (4.50 лв)");
             Console.WriteLine("3. Вегетариански бургер (4.40 лв)");
 
-            string input = Console.ReadLine();
-            int burgerType;
+            int burgerType = InputHelper.GetBurgerInput();
 
-            if (int.TryParse(input, out burgerType) && burgerType > 0 && burgerType < 4)
-            {
-                _chef.SetBurgerType(burgerType);
-            }
-            else
-            {
-                Console.WriteLine("Невалиден тип! Моля изберете число между 1 и 3.");
-            }
+            _chef.SetBurgerType(burgerType);
         }
     }
 }

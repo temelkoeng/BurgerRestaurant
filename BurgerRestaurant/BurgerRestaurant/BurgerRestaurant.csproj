@@ -55,6 +55,7 @@
     <Compile Include="Factories\Burgers\VegetarianBurger.cs" />
     <Compile Include="Factories\IBurger.cs" />
     <Compile Include="Factories\IBurgerFactory.cs" />
+    <Compile Include="Helpers\InputHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Restaurant.cs" />
