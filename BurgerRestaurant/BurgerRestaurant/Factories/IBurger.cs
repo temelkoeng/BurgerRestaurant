@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BurgerRestaurant.Factories
 {
-    internal class IBurger
+    public interface IBurger
     {
+        string GetName();
+        decimal GetPrice();
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BurgerRestaurant.Factories
 {
-    internal class IBurgerFactory
+    public interface IBurgerFactory
     {
+        IBurger CreateBurger(int type);
     }
 }
